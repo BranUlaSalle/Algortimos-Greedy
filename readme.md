@@ -1,6 +1,6 @@
 <a href="https://github.com/r3mz0/" target="_blank"><img src="https://github.com/BranUlaSalle/imagenesdereferencia/blob/main/imageforgithub.png" /></a>
 
-# Bienvenido a lenguaje de programacion II
+# Bienvenido a Analisis de algoritmos Greedy
 ## Autor: Bran Yames Paz Patatingo
 
 # Explicacion:
