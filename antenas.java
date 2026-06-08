@@ -24,6 +24,7 @@ public class antenas {
             }
             System.out.println();
         }
+        //cantidad total
         System.out.println("antenas utilizadas: " + cont); 
 
     }
