@@ -1,7 +1,7 @@
 public class antenas {
     public static void main(String[] args) {
         int[] casas = {1, 2, 7, 11, 20, 21, 30};
-        int cober = 5; 
+        int R = 5; 
         
         int n = casas.length; // n = 7
         int cont = 0;
@@ -9,10 +9,22 @@ public class antenas {
 
         
         while (i < n) {
-            int dondePoner = casas[i] + cober; 
+
+            int casaActual = casas[i];
+            int dondePoner = casaActual + R;
             cont++;
-            System.out.println("Antena " + cont + " " + dondePoner);
-            
+            // hasta donde cubre
+            int limite = dondePoner + R;
+
+            //casas que se benefician 
+            System.out.print("beneficiadas: ");
+            while (i < n && casas[i] <= limite) {
+                System.out.print(casas[i] + " ");
+                i++; // saltamos a la siguiente casa ya cubierta
+            }
+            System.out.println();
         }
+        System.out.println("antenas utilizadas: " + cont); 
+
     }
 }
