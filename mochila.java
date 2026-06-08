@@ -1,9 +1,9 @@
 public class mochila {
     public static void main(String[] args) {
         double capacidad = 50; 
-        String[] items = {"A", "B", "C", "D"};
-        double[] v = {60, 100, 120, 50};
-        double[] p = {10, 20, 30, 5};
+        String[] items = {"A", "B", "C"};
+        double[] v = {60, 100, 120};
+        double[] p = {10, 20, 30};
         
         //creo en heap tres espacios contiguos 
         int n = items.length;
@@ -29,9 +29,31 @@ public class mochila {
                 }
             }
         }
-        // probando agregando d
+
+        System.out.println("Objetos seleccionados:");
+        
+        double total = 0;
+
+
         for (int i = 0; i < n; i++) {
-            System.out.println( i + " " + items[i] + " : " + valor[i] );
+            System.out.println("capacidad: " + capacidad);
+            //si la mochilla esta llena entonces salgo del for
+            if (capacidad <= 0) break;
+            // como el ultimo es 30 solo quedara dsiponible 20 de capacidad pasa a fraccionarse
+            if (p[i] <= capacidad) {
+                total += v[i];
+                capacidad -= p[i];
+                System.out.println(items + "completo");
+            } else {
+                double parte = capacidad / p[i];
+                total += v[i] * parte;
+                boolean lleno=true;
+                if(lleno == true) capacidad = 0;
+                System.out.println("Parte del objeto " + items);
+            }
         }
+
+        System.out.println("Valor total aproxiamdo: " + total);
     }
+        
 }
