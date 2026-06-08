@@ -36,20 +36,19 @@ public class mochila {
 
 
         for (int i = 0; i < n; i++) {
-            System.out.println("capacidad: " + capacidad);
             //si la mochilla esta llena entonces salgo del for
             if (capacidad <= 0) break;
             // como el ultimo es 30 solo quedara dsiponible 20 de capacidad pasa a fraccionarse
             if (p[i] <= capacidad) {
                 total += v[i];
                 capacidad -= p[i];
-                System.out.println(items + "completo");
+                System.out.println(items[i] + " completo");
             } else {
                 double parte = capacidad / p[i];
                 total += v[i] * parte;
                 boolean lleno=true;
                 if(lleno == true) capacidad = 0;
-                System.out.println("Parte del objeto " + items);
+                System.out.println("Parte del objeto " + items[i]);
             }
         }
 
